@@ -32,8 +32,8 @@ func (s *Store) Open() error {
 	return nil
 }
 
-func (s *Store) Close() error {
-	return s.db.Close()
+func (s *Store) Close() {
+	s.db.Close()
 }
 
 func (s *Store) User() *UserRepository {
